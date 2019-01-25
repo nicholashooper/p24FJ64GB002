@@ -208,6 +208,9 @@ ps_coeff:
           .section .nbss, bss, near
 var1:     .space 2               ;Example of allocating 1 word of space for
                                  ;variable "var1".
+A_REG:    .space 2
+B_REG:    .space 2
+C_REG:    .space 2
 
 
 
@@ -229,6 +232,34 @@ __reset:
                                   ;Optionally use RCALL instead of CALL
 
 	   	;<<insert more user code here>>
+
+		;Clear variables
+		clr A_REG
+		clr B_REG
+		clr C_REG
+
+		;Move the decimal 2 into the w1 register.
+		;Move the decimal 3 into the w2 register.
+		mov #2,w1
+		mov #3,w2
+		
+		;Move the value of register w1 to the variable A_REG
+		;Move the value of register w2 to the variable B_REG
+		mov w1,A_REG
+		mov w2,B_REG
+
+		;Subtract the value of w1 from w2 and move the result to w3.
+		;Move the value of w3 to the variable C_REG.
+		sub w2,w1,w3
+		mov w3,C_REG
+
+
+		
+		
+
+
+
+
 
 done:
         BRA     done              ;Place holder for last line of executed code
