@@ -238,19 +238,17 @@ __reset:
 		clr B_REG
 		clr C_REG
 
-		;Move the decimal 2 into the w1 register.
-		;Move the decimal 3 into the w2 register.
-		mov #2,w1
-		mov #3,w2
-		
-		;Move the value of register w1 to the variable A_REG
-		;Move the value of register w2 to the variable B_REG
+		;Initilize the A, B, and C variables.
+		mov #0x20,w1
+		mov #0x10,w2
+		mov #0x0,w3
+
 		mov w1,A_REG
 		mov w2,B_REG
+		mov w3,C_REG
 
-		;Subtract the value of w1 from w2 and move the result to w3.
-		;Move the value of w3 to the variable C_REG.
-		sub w2,w1,w3
+		;Subtract the value of w1 from w2 and move the result into the C variable.
+		sub w1,w2,w3
 		mov w3,C_REG
 
 
