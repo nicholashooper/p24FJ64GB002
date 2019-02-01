@@ -1,4 +1,4 @@
-Microchip Technology Inc, vv3_31 (A) n
+Microchip Technology Inc, vv3_31 (A) ´
 
 Tool Name:
   C:\Program Files (x86)\Microchip\MPLAB ASM30 Suite\bin\bin/pic30-coff-ld.exe
@@ -21,15 +21,15 @@ Program Memory  [Origin = 0x200, Length = 0xa9f6]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                 0x4             0x6  (6)
-.text                        0x204                0x3c            0x5a  (90)
-.myconstbuffer               0x240                 0x8             0xc  (12)
-.dinit                       0x248                 0x8             0xc  (12)
-config_4.sec                 0x250                 0x2             0x3  (3)
-CONFIG_3.sec                 0x252                 0x2             0x3  (3)
-CONFIG_2.sec                 0x254                 0x2             0x3  (3)
-CONFIG_1.sec                 0x256                 0x2             0x3  (3)
+.text                        0x204                0x46            0x69  (105)
+.myconstbuffer               0x24a                 0x8             0xc  (12)
+.dinit                       0x252                 0x8             0xc  (12)
+config_4.sec                 0x25a                 0x2             0x3  (3)
+CONFIG_3.sec                 0x25c                 0x2             0x3  (3)
+CONFIG_2.sec                 0x25e                 0x2             0x3  (3)
+CONFIG_1.sec                 0x260                 0x2             0x3  (3)
 
-                     Total program memory used (bytes):           0x84  (132) <1%
+                     Total program memory used (bytes):           0x93  (147) <1%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -55,23 +55,23 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __DefaultInterrupt
                   0x000204                  __reset
-                  0x00022c                  _wreg_init
-                  0x000238                  __T1Interrupt
-                  0x000250                  config_4
-                  0x000252                  CONFIG_3
-                  0x000254                  CONFIG_2
-                  0x000256                  CONFIG_1
+                  0x000236                  _wreg_init
+                  0x000242                  __T1Interrupt
+                  0x00025a                  config_4
+                  0x00025c                  CONFIG_3
+                  0x00025e                  CONFIG_2
+                  0x000260                  CONFIG_1
 
 External Symbols in Program Memory (by name):
 
-                  0x000256                  CONFIG_1
-                  0x000254                  CONFIG_2
-                  0x000252                  CONFIG_3
+                  0x000260                  CONFIG_1
+                  0x00025e                  CONFIG_2
+                  0x00025c                  CONFIG_3
                   0x000200                  __DefaultInterrupt
-                  0x000238                  __T1Interrupt
+                  0x000242                  __T1Interrupt
                   0x000204                  __reset
-                  0x00022c                  _wreg_init
-                  0x000250                  config_4
+                  0x000236                  _wreg_init
+                  0x00025a                  config_4
 
 Memory Configuration
 
@@ -183,7 +183,7 @@ __CONFIG1
                   0x000014          0x4 LONG 0x200 DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000016          0x4 LONG 0x200 DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x200 DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001a          0x4 LONG 0x238 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x242 DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001c          0x4 LONG 0x200 DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x200 DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x200 DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -311,7 +311,7 @@ __CONFIG1
                   0x000114          0x4 LONG 0x200 DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000116          0x4 LONG 0x200 DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000118          0x4 LONG 0x200 DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011a          0x4 LONG 0x238 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011a          0x4 LONG 0x242 DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011c          0x4 LONG 0x200 DEFINED (__AltInterrupt4)?ABSOLUTE (__AltInterrupt4):DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
                   0x00011e          0x4 LONG 0x200 DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x200 DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1254,31 +1254,31 @@ LOAD default_isr
 .nbss               0x0800          0x8
  .nbss              0x0800          0x8 p24FJ64GB002.o
 
-.text             0x000204         0x3c
- .text            0x000204         0x3c p24FJ64GB002.o
+.text             0x000204         0x46
+ .text            0x000204         0x46 p24FJ64GB002.o
                   0x000204                  _reset
-                  0x00022c                  wreg_init
-                  0x000238                  _T1Interrupt
+                  0x000236                  wreg_init
+                  0x000242                  _T1Interrupt
 
-.myconstbuffer    0x000240          0x8
+.myconstbuffer    0x00024a          0x8
  .myconstbuffer
-                  0x000240          0x8 p24FJ64GB002.o
+                  0x00024a          0x8 p24FJ64GB002.o
 
-.dinit            0x000248          0x8
- .dinit           0x000248          0x8 data_init
+.dinit            0x000252          0x8
+ .dinit           0x000252          0x8 data_init
 
-config_4.sec      0x000250          0x2
- config_4.sec     0x000250          0x2 p24FJ64GB002.o
-                  0x000250                  config_4
+config_4.sec      0x00025a          0x2
+ config_4.sec     0x00025a          0x2 p24FJ64GB002.o
+                  0x00025a                  config_4
 
-CONFIG_3.sec      0x000252          0x2
- CONFIG_3.sec     0x000252          0x2 p24FJ64GB002.o
-                  0x000252                  CONFIG_3
+CONFIG_3.sec      0x00025c          0x2
+ CONFIG_3.sec     0x00025c          0x2 p24FJ64GB002.o
+                  0x00025c                  CONFIG_3
 
-CONFIG_2.sec      0x000254          0x2
- CONFIG_2.sec     0x000254          0x2 p24FJ64GB002.o
-                  0x000254                  CONFIG_2
+CONFIG_2.sec      0x00025e          0x2
+ CONFIG_2.sec     0x00025e          0x2 p24FJ64GB002.o
+                  0x00025e                  CONFIG_2
 
-CONFIG_1.sec      0x000256          0x2
- CONFIG_1.sec     0x000256          0x2 p24FJ64GB002.o
-                  0x000256                  CONFIG_1
+CONFIG_1.sec      0x000260          0x2
+ CONFIG_1.sec     0x000260          0x2 p24FJ64GB002.o
+                  0x000260                  CONFIG_1

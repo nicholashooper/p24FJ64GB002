@@ -233,23 +233,36 @@ __reset:
 
 	   	;<<insert more user code here>>
 
+		;housekeeping
+			clr TRISB
+
+			; 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+            ;  1  1  1  1  1  1  1  1  0  0  0  0  0  0  0
+            ;       F           F          0        0
+
+			MOV 0xFF00, W0 ; Configure PORTB<15:8> as inputs
+
+			MOV W0, TRISB ; and PORTB<7:0> as outputs
+			NOP ; Delay 1 cycle
+			BTSS PORTB, #13 ; Next Instruction
+
+			bset PORTB,#7
+			bclr PORB,#7
+
 		;Clear variables
 		clr A_REG
 		clr B_REG
 		clr C_REG
 
-		;Initilize the A, B, and C variables.
-		mov #0x20,w1
-		mov #0x10,w2
-		mov #0x0,w3
+		;Multiply Stuff
+		mov #0x5050,w0
+		mov w0,A_REG
 
-		mov w1,A_REG
-		mov w2,B_REG
-		mov w3,C_REG
+		mov #0x0505,w1
+		mov w1,B_REG
 
-		;Subtract the value of w1 from w2 and move the result into the C variable.
-		sub w1,w2,w3
-		mov w3,C_REG
+		mul.uu w0,w1,w2
+		mov w2,C_REG
 
 
 		
